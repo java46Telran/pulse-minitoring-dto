@@ -1,5 +1,7 @@
 package telran.monitoring.model;
 
+
+
 public class PulseProbe {
 public long patientId;
 public long timestamp;
@@ -10,8 +12,14 @@ public PulseProbe(long patientId, long timestamp, long sequenceNumber, int value
 	this.timestamp = timestamp;
 	this.sequenceNumber = sequenceNumber;
 	this.value = value;
+	
 }
 public PulseProbe() {
+}
+@Override
+public String toString() {
+	return "PulseProbe [patientId=" + patientId + ", timestamp=" + timestamp + ", sequenceNumber=" + sequenceNumber
+			+ ", value=" + value + "]";
 }
 
 }
