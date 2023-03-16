@@ -1,6 +1,6 @@
 package telran.monitoring.model;
 
-
+import java.util.Objects;
 
 public class PulseProbe {
 public long patientId;
@@ -20,6 +20,21 @@ public PulseProbe() {
 public String toString() {
 	return "PulseProbe [patientId=" + patientId + ", timestamp=" + timestamp + ", sequenceNumber=" + sequenceNumber
 			+ ", value=" + value + "]";
+}
+@Override
+public int hashCode() {
+	return Objects.hash(patientId, value);
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	PulseProbe other = (PulseProbe) obj;
+	return patientId == other.patientId && value == other.value;
 }
 
 }
