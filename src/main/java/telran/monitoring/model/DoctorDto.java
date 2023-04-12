@@ -2,10 +2,15 @@ package telran.monitoring.model;
 
 import java.util.Objects;
 
+import jakarta.validation.constraints.*;
+
 public class DoctorDto {
+	@Email @NotEmpty
 public String email;
+	@NotEmpty
 public String name;
 public DoctorDto(String email, String name) {
+	
 	this.email = email;
 	this.name = name;
 }

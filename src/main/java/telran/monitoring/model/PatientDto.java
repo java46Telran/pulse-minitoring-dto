@@ -1,9 +1,10 @@
 package telran.monitoring.model;
 
 import java.util.Objects;
-
+import jakarta.validation.constraints.*;
 public class PatientDto {
 public long id;
+@NotEmpty
 public String name;
 public PatientDto(long id, String name) {
 	this.id = id;
